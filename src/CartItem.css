@@ -101,6 +101,11 @@
     margin-top: 10px; /* Add margin top for spacing */
   }
 }
+
+
+
+
+
 .cart-item {
     display: flex;
     border-bottom: 1px solid #ccc;
@@ -173,12 +178,14 @@
   .cart-item-delete:hover {
     background-color: #cc0000;
   }
+  
   /* .cart-item-button-dec{
     background-color: red;
   }
   .cart-item-button-inc{
     background-color: green;
   } */
+
   @media (max-width: 768px) {
     .cart-item {
       flex-direction: column; /* Change flex direction to stack items vertically */
