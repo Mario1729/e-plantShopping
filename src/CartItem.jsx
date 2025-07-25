@@ -32,8 +32,15 @@ const CartItem = ({ onContinueShopping }) => {
     };
 
     const handleDecrement = (item) => {
-        if (item.quantity > 1)
+        if (item.quantity === 1) {
+            const confirmDelete = window.confirm(`Do you want to remove ${item.name} from the cart?`);
+            if (confirmDelete) {
+              dispatch(removeItem(item.name));
+            }
+          } else {
+            // existing logic to decrement quantity
             dispatch(updateQuantity({ name: item.name, quantity: item.quantity - 1 }));
+          }
     };
 
     const handleRemove = (item) => {
